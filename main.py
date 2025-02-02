@@ -20,5 +20,10 @@ def main():
     # Вычисляется среднее значение колонки 'Close'. Результат выводится в консоль.
     print(dd.calculate_and_display_average_price(stock_data))
 
+    # Запрос у пользователя порога колебания. Уведомляет пользователя, если цена акций колебалась более чем на заданный
+    # процент за период.
+    threshold = int(input("Уведомление о сильных колебаниях. Введите порог колебания цен в процентах: "))
+    dd.notify_if_strong_fluctuations(stock_data, threshold)
+
 if __name__ == "__main__":
     main()
